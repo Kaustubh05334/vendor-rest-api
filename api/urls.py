@@ -10,7 +10,7 @@ router1.register('', PurchaseOrderViewSet)
 
 urlpatterns = [
     path('vendors/', include(router.urls)),
-    path('vendors/<int:vendor_id>/performance', vendor_performance, name='vendor-performance'),
+    path('vendors/<int:vendor_id>/performance/', vendor_performance, name='vendor-performance'),
     path('purchase_orders/', include(router1.urls)),
-    path('purchase_orders/<int:po_id>/acknowledge',acknowledge_purchase_order, name='acknowledge_purchase_order'),
+    path('purchase_orders/<int:po_id>/acknowledge/',acknowledge_purchase_order, name='acknowledge_purchase_order'),
 ]
