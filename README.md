@@ -46,3 +46,56 @@ metrics.
   - issue_date: DateTimeField - Timestamp when the PO was issued to the vendor.
   Field for POST (only for the vendor to acknowledge)
   - acknowledgment_date: DateTimeField, nullable - Timestamp when the vendor acknowledged the PO.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+What things you need to install the software and how to install them:
+- Python 3.x
+- pip (Python package manager)
+- Virtualenv (optional, but recommended)
+
+### Installing
+
+A step by step series of examples that tell you how to get a development environment running.
+
+1. **Clone the Repository**
+
+   ```shell
+   git clone https://github.com/Kaustubh05334/vendor-rest-api.git
+   cd vendor-rest-api
+   ```
+2. **Set up virtual environment (recommended)**
+   creating virtual environment
+   ```shell
+   python -m venv env
+   ```
+   activaing virtual environment
+   on Windows
+   ```shell
+   ./env/Scripts/activate
+   ```
+   on MacOS or Linux
+   ```bash
+   source env/bin/activate
+   ```
+3. **Database Migrations**
+   ```shell
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+4. **Create superuser to access admin panel**
+   ```shell
+   python manage.py createsuperuser
+   ```
+5. **Run the server on localhost**
+   ```shell
+   python manage.py runserver
+   ```
+   this command will run the server on the localhost on port 8000 by default, for running it on specific port
+   ```shell
+   python manage.py runserver {port}
+   ```
+Now the server is running and client scripts can be used to make api calls to the server.
